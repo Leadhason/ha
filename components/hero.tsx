@@ -2,7 +2,7 @@ const tags = ["✦ Design", "Experiences", "Strategy", "Branding", "UI", "Develo
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen z-0 bg-nexo overflow-hidden">
+    <div className="relative min-h-screen z-0 bg-tarantula overflow-hidden">
       {/* Tags Carousel */}
       <div className="pt-80 overflow-hidden max-w-xl">
         <div className="flex gap-3 animate-marquee whitespace-nowrap">

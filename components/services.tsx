@@ -35,7 +35,7 @@ const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-gray-100 py-24 px-8">
+    <section className="bg-gray-100 py-24 px-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-6">
@@ -56,9 +56,9 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`relative grid grid-cols-12 items-center py-12 px-6 border-b border-dotted border-gray-300 cursor-pointer transition-all duration-300 ${
+              className={`relative grid grid-cols-12 items-center py-8 px-6 border-b border-dotted border-gray-300 cursor-pointer transition-all duration-300 ${
                 hoveredIndex === index
-                  ? "bg-gradient-to-r from-violet-500 to-cyan-400 text-white rounded-2xl"
+                  ? "bg-gradient-to-r from-violet-500 to-cyan-400 text-white rounded-none"
                   : ""
               }`}
               onMouseEnter={() => setHoveredIndex(index)}

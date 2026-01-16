@@ -76,8 +76,11 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className=" py-24 px-8">
-      <div className="max-w-6xl mx-auto">
+    <section ref={sectionRef} className="relative py-24 px-8 z-0">
+      {/* Background blob */}
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-cyan-200/60 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-16">
           <span className="inline-block px-4 py-2 bg-gray-100 rounded-full text-xs font-medium shadow-sm mb-6">
@@ -90,10 +93,10 @@ const Portfolio = () => {
           </h2>
         </div>
 
-        {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Portfolio Layout - using flex instead of grid for proper sticky behavior */}
+        <div className="flex flex-col lg:flex-row gap-12">
           {/* Left side - Scrollable text */}
-          <div className="space-y-48">
+          <div className="lg:w-1/2 space-y-48">
             {portfolioItems.map((item, index) => (
               <div key={index} className="portfolio-text relative min-h-[300px]">
                 {/* Large number */}
@@ -132,7 +135,7 @@ const Portfolio = () => {
           </div>
 
           {/* Right side - Sticky images */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block lg:w-1/2">
             <div className="sticky top-24">
               <div
                 ref={imagesContainerRef}

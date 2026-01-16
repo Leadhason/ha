@@ -11,7 +11,7 @@ const testimonials = [
   {
     avatar: "/abstract.jfif",
     rating: 5,
-    quote: "Nexo Studio robust security features ensure that our transactions are always safe & security.",
+    quote: "Tarantula's robust security features ensure that our transactions are always safe & secure.",
     name: "Miles, Esther",
     role: "CTO at Innovate AI",
     isVideo: false,
@@ -27,7 +27,7 @@ const testimonials = [
   {
     avatar: "/abstract.jfif",
     rating: 5,
-    quote: "AI Wallet's robust security features ensure that our transactions are always safe.",
+    quote: "Tarantula's robust security features ensure that our transactions are always safe.",
     name: "James Park",
     role: "CEO at FintechX",
     isVideo: false,
@@ -35,7 +35,7 @@ const testimonials = [
   {
     avatar: "/abstract.jfif",
     rating: 5,
-    quote: "AI Wallet automated our payment processing, saving us hours every week while enhancing security.",
+    quote: "Tarantula automated our payment processing, saving us hours every week while enhancing security.",
     name: "Juairiya",
     role: "CTO at Innovate AI",
     isVideo: false,
@@ -82,8 +82,8 @@ const Testimonials = () => {
     // Animate cards to unfold into a row
     tl.to(cards, {
       top: 0,
-      x: (i) => (i - (totalCards - 1) / 2) * 350,
-      rotation: 0,
+      x: (i) => (i - (totalCards - 1) / 2) * 250,
+      rotation: (i) => (i === 0 || i === totalCards - 1) ? -6 : 6,
       stagger: 0.05,
       ease: "power2.out",
     });
@@ -94,7 +94,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="min-h-screen bg-nexo-light py-24 px-8 overflow-hidden">
+    <section ref={sectionRef} className="min-h-screen py-24 px-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-6">
@@ -114,7 +114,7 @@ const Testimonials = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-8">
           {/* Left - Stats */}
           <div>
-            <p className="text-6xl font-bold">145+</p>
+            <p className="text-4xl font-semibold">145+</p>
             <p className="text-gray-500 text-sm">Services provided over the last 3 years</p>
           </div>
 
@@ -147,11 +147,12 @@ const Testimonials = () => {
 
         {/* Testimonial Cards */}
         <div className="relative h-[600px] mt-16">
+           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-cyan-200/60 rounded-full blur-3xl -z-10" />
           <div ref={cardsContainerRef} className="relative w-full h-full">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="testimonial-card w-72 h-[480px] bg-white/60 backdrop-blur-md border border-white/50 rounded-2xl p-6 shadow-lg"
+                className="testimonial-card w-72 h-[380px] bg-white/60 backdrop-blur-md border border-white/50 border-t-gray-100 rounded-md p-6 shadow-md"
               >
                 {testimonial.isVideo ? (
                   // Video Card
@@ -161,7 +162,7 @@ const Testimonials = () => {
                         <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover" />
                       </div>
                     </div>
-                    <div className="flex-1 bg-gray-400 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                    <div className="flex-1 bg-gray-400 rounded-md flex items-center justify-center relative overflow-hidden">
                       <img src={testimonial.avatar} alt={testimonial.name} className="w-full h-full object-cover absolute inset-0" />
                       <div className="w-14 h-14 bg-white/80 rounded-full flex items-center justify-center z-10">
                         <Play className="w-6 h-6 text-gray-800 ml-1" fill="currentColor" />

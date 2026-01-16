@@ -46,14 +46,14 @@ const WhoWeHelp = () => {
     const cardWidth = 256; // w-64 = 16rem = 256px
     const gap = 24; // gap-6 = 1.5rem = 24px
 
-    // Set initial stacked state - centered
+    // Set initial stacked state - centered with more spacing
     gsap.set(cards, {
       position: "absolute",
       top: 0,
       left: "50%",
       xPercent: -50,
-      x: (i) => (i - (totalCards - 1) / 2) * 25,
-      rotation: (i) => (i - (totalCards - 1) / 2) * 4,
+      x: (i) => (i - (totalCards - 1) / 2) * 50,
+      rotation: 0,
       transformOrigin: "center bottom",
       zIndex: (i) => i,
     });
@@ -70,11 +70,10 @@ const WhoWeHelp = () => {
       },
     });
 
-    // Animate cards to unfold
+    // Animate cards to unfold - from edges simultaneously
     tl.to(cards, {
       x: (i) => (i - (totalCards - 1) / 2) * (cardWidth + gap),
       rotation: 0,
-      stagger: 0.05,
       ease: "power2.out",
     });
 
@@ -86,7 +85,7 @@ const WhoWeHelp = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen bg-nexo-light py-24 px-8 overflow-hidden"
+      className="min-h-screen bg-gray-100 py-24 px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
@@ -107,12 +106,12 @@ const WhoWeHelp = () => {
         <div ref={cardsRef} className="flex justify-center">
           <div
             ref={cardsContainerRef}
-            className="relative h-[350px] w-full max-w-5xl"
+            className="relative h-[380px] w-full max-w-5xl"
           >
             {sectors.map((sector, index) => (
               <div
                 key={index}
-                className="sector-card w-64 h-[320px] bg-white/40 backdrop-blur-md border border-white/50 rounded-3xl p-6 shadow-lg flex flex-col"
+                className="sector-card w-64 h-[350px] bg-white/40 backdrop-blur-md border border-white/50 rounded-md p-6 shadow-md flex flex-col"
               >
                 <div className="mb-4">
                   <sector.icon className="w-8 h-8 stroke-[1.5]" />

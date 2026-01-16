@@ -27,11 +27,12 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-nexo-light py-24 px-8">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-gray-100 py-24 px-8 relative overflow-hidden z-0">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-cyan-200/60 rounded-full blur-3xl" />
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Badge */}
         <div className="flex justify-center mb-6">
-          <span className="px-4 py-2 bg-white rounded-full text-xs font-medium shadow-sm">
+          <span className="px-4 py-2 bg-white rounded-full text-xs font-medium shadow-sm">  
             WHY CHOOSE US
           </span>
         </div>
