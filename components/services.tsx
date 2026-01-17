@@ -3,29 +3,34 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
     number: "01",
     title: "UI/UX",
+    slug: "ui-ux",
     description: "Custom websites designed to captivate your audience and drive conversions.",
     image: "/abstract.jfif",
   },
   {
     number: "02",
     title: "Growth",
+    slug: "growth",
     description: "Enhance your online visibility and attract qualified traffic with our proven SEO.",
     image: "/abstract.jfif",
   },
   {
     number: "03",
     title: "Branding",
+    slug: "branding",
     description: "Craft a memorable brand identity with impactful design and messaging.",
     image: "/abstract.jfif",
   },
   {
     number: "04",
     title: "Code",
+    slug: "code",
     description: "Build and scale your online store with seamless e-commerce solutions tailored for growth.",
     image: "/abstract.jfif",
   },
@@ -54,7 +59,8 @@ const Services = () => {
         {/* Services List */}
         <div className="border-t border-dotted border-gray-300">
           {services.map((service, index) => (
-            <div
+            <Link
+              href={`/services/${service.slug}`}
               key={index}
               className={`relative grid grid-cols-12 items-center py-8 px-6 border-b border-dotted border-gray-300 cursor-pointer transition-all duration-300 ${
                 hoveredIndex === index
@@ -101,7 +107,7 @@ const Services = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

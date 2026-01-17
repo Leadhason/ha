@@ -2,7 +2,11 @@ const tags = ["✦ Design", "Experiences", "Strategy", "Branding", "UI", "Develo
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen z-0 bg-tarantula overflow-hidden">
+    <div 
+      className="relative min-h-screen z-0 overflow-hidden"
+      style={{ backgroundImage: "url('/abstratct-bg-1.png')", backgroundSize: "cover", backgroundPosition: "center" }}
+      // Previous bg class: bg-tarantula
+    >
       {/* Tags Carousel */}
       <div className="pt-80 overflow-hidden max-w-xl">
         <div className="flex gap-3 animate-marquee whitespace-nowrap">
