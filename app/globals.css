@@ -154,6 +154,36 @@ body {
     animation: marquee 10s linear infinite;
   }
 
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-marquee-reverse {
+    animation: marquee-reverse 15s linear infinite;
+  }
+
+  .mask-fade-edges {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+  }
+
   .animate-marquee-slow {
     animation: marquee 15s linear infinite;
   }
