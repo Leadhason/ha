@@ -7,28 +7,7 @@ import { Monitor, PenTool, MessageSquare, TreePine } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const sectors = [
-  {
-    icon: Monitor,
-    title: "SaaS Startups",
-    description: "We help product-led startups build clean, intuitive interfaces",
-  },
-  {
-    icon: PenTool,
-    title: "Digital Agencies",
-    description: "White-label design solutions and collaboration for fast-moving agencies.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Coaches & Consultants",
-    description: "Build trust & conversion with expert personal branding and sales-driven design.",
-  },
-  {
-    icon: TreePine,
-    title: "Health & Wellness Brands",
-    description: "Clean, & conversion-optimized experiences for focused businesses.",
-  },
-];
+import { sectors } from "@/lib/data";
 
 const WhoWeHelp = () => {
   const sectionRef = useRef<HTMLElement>(null);

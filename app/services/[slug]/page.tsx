@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { servicesData, getServiceBySlug } from "@/lib/services-data";
+import { servicesData, getServiceBySlug } from "@/lib/data";
 import ServicePageContent from "./service-page-content";
 
 // Generate static params for all services

@@ -6,35 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const portfolioItems = [
-  {
-    number: "01",
-    tags: ["SaaS", "UI/UX Design", "Strategy"],
-    title: "Zenith",
-    subtitle: "SaaS dashboard",
-    description: "Redesigned a B2B SaaS dashboard to improve usability and onboarding, leading to 37% higher user retention.",
-    image: "/abstract.jfif",
-    bgColor: "bg-gradient-to-br from-violet-100 to-cyan-100",
-  },
-  {
-    number: "02",
-    tags: ["Fitness", "UI/UX Design", "Strategy"],
-    title: "Fitness",
-    subtitle: "coaching website",
-    description: "A bold and energetic website design for an online fitness coach and course platform. and energetic website design for an online.",
-    image: "/abstract.jfif",
-    bgColor: "bg-gradient-to-br from-pink-100 to-purple-100",
-  },
-  {
-    number: "03",
-    tags: ["Crypto", "UI/UX Design", "Strategy"],
-    title: "Crypto",
-    subtitle: "trading app",
-    description: "A sleek and modern trading application designed to simplify cryptocurrency trading for beginners and experts alike.",
-    image: "/abstract.jfif",
-    bgColor: "bg-gradient-to-br from-blue-100 to-indigo-100",
-  },
-];
+import { portfolioItems } from "@/lib/data";
 
 const Portfolio = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -57,14 +29,15 @@ const Portfolio = () => {
     textItems.forEach((item, index) => {
       if (index < textItems.length - 1) {
         // Fade out current image and fade in next image as user scrolls
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: item,
-            start: "bottom center",
-            end: "bottom top",
-            scrub: true,
-          },
-        })
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: item,
+              start: "bottom center",
+              end: "bottom top",
+              scrub: true,
+            },
+          })
           .to(images[index], { opacity: 0 }, 0)
           .to(images[index + 1], { opacity: 1 }, 0);
       }
@@ -79,11 +52,11 @@ const Portfolio = () => {
     <section ref={sectionRef} className="relative py-24 px-8 z-0">
       {/* Background blob */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-cyan-200/60 rounded-full blur-3xl pointer-events-none" />
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="mb-16">
-          <span className="inline-block px-4 py-2 bg-gray-100 rounded-full text-xs font-medium shadow-sm mb-6">
+          <span className="inline-block px-4 py-2 bg-gray-100 rounded-full text-xs font-medium mb-6">
             OUR PORTFOLIO
           </span>
           <h2 className="text-3xl md:text-4xl font-bold">
@@ -98,9 +71,15 @@ const Portfolio = () => {
           {/* Left side - Scrollable text */}
           <div className="lg:w-1/2 space-y-48">
             {portfolioItems.map((item, index) => (
-              <div key={index} className="portfolio-text relative min-h-[300px]">
+              <div
+                key={index}
+                className="portfolio-text relative min-h-[300px]"
+              >
                 {/* Large number */}
-                <span className="absolute -left-4 top-0 text-[8rem] font-bold text-transparent leading-none" style={{ WebkitTextStroke: '1px rgba(0,0,0,0.1)' }}>
+                <span
+                  className="absolute -left-4 top-0 text-[8rem] font-bold text-transparent leading-none"
+                  style={{ WebkitTextStroke: "1px rgba(0,0,0,0.1)" }}
+                >
                   {item.number}
                 </span>
 
@@ -144,12 +123,12 @@ const Portfolio = () => {
                 {portfolioItems.map((item, index) => (
                   <div
                     key={index}
-                    className={`portfolio-image absolute inset-0 ${item.bgColor} rounded-3xl flex items-center justify-center`}
+                    className={`portfolio-image absolute inset-0 rounded-3xl flex items-center justify-center`}
                   >
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-4/5 h-4/5 object-contain"
+                      className="object-cover"
                     />
                   </div>
                 ))}
