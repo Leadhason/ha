@@ -64,7 +64,7 @@ const WhoWeHelp = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen bg-gray-100 py-24 px-8 overflow-hidden"
+      className="min-h-screen bg-gray-100 py-8 mt-12 px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
@@ -75,17 +75,17 @@ const WhoWeHelp = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Empowering bold <span className="font-playfair italic">ideas</span>
           <br />
           across these sectors
         </h2>
 
         {/* Cards Container */}
-        <div ref={cardsRef} className="flex justify-center">
+        <div ref={cardsRef} className="flex justify-center h-[600px] w-8xl">
           <div
             ref={cardsContainerRef}
-            className="relative h-[380px] w-full max-w-5xl"
+            className="relative h-full w-full"
           >
             {sectors.map((sector, index) => (
               <div

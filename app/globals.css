@@ -248,4 +248,30 @@ body {
     background-repeat: repeat-x;
     border: none;
   }
+
+  /* Custom generative abstract hover for services */
+  .bg-service-hover {
+    background-color: #1e3a8a; /* Deep Blue 900 */
+    background-image:
+      radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.6) 0px, transparent 55%),
+      radial-gradient(at 100% 0%, rgba(34, 211, 238, 0.4) 0px, transparent 50%),
+      radial-gradient(
+        at 100% 100%,
+        rgba(37, 99, 235, 0.5) 0px,
+        transparent 60%
+      ),
+      radial-gradient(at 50% 50%, rgba(29, 78, 216, 0.3) 0px, transparent 70%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-service-hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.12;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
 }

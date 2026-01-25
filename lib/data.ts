@@ -225,6 +225,35 @@ export const testimonialData = [
   },
 ];
 
+// FAQ Data
+export const faqData = [
+  {
+    question: "How do I contact you for inquiries or collaborations?",
+    answer:
+      "You can reach out via our contact form or directly through email. We typically respond within 24-48 business hours to discuss potential projects and partnerships.",
+  },
+  {
+    question: "What is artificial intelligence (AI)?",
+    answer:
+      "AI refers to systems or machines that mimic human intelligence to perform tasks and can iteratively improve themselves based on the information they collect.",
+  },
+  {
+    question: "How do I start with AI solutions?",
+    answer:
+      "Beginning your AI journey starts with a discovery call. We identify your business pain points and determine where automation or intelligent insights can provide the most value.",
+  },
+  {
+    question: "How does AI improve business efficiency?",
+    answer:
+      "AI improves efficiency by automating repetitive tasks, providing data-driven insights for better decision-making, and enhancing customer experiences through personalization.",
+  },
+  {
+    question: "What industries can benefit from AI?",
+    answer:
+      "Almost any industry can benefit, from healthcare and finance to retail and manufacturing. Any process involving data analysis or repetitive workflows is a candidate for AI optimization.",
+  },
+];
+
 // Helper functions for services
 export const getServiceBySlug = (slug: string) => {
   return servicesData.find((service) => service.slug === slug);

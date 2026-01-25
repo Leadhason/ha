@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Design with purpose,
           <br />
           built with <span className="font-playfair italic">results</span>
@@ -49,11 +49,11 @@ const WhyChooseUs = () => {
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="group h-64 perspective-1000"
+              className="group h-52 perspective-1000"
             >
               <div className="relative w-full h-full transition-transform duration-500 transform-style-3d group-hover:rotate-y-180">
                 {/* Front of card */}
-                <div className="absolute inset-0 backface-hidden bg-white/60 backdrop-blur-sm rounded-3xl p-6 flex flex-col justify-between shadow-sm border border-white/50">
+                <div className="absolute inset-0 backface-hidden bg-white/40 backdrop-blur-sm rounded-3xl p-6 flex flex-col justify-between shadow-sm border border-white/60">
                   <div className="flex justify-end">
                     <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center">
                       <reason.icon className="w-5 h-5 text-white" />

@@ -54,7 +54,7 @@ const Contact = () => {
           <div className="bg-white border-l border-gray-200 pl-0 lg:pl-16">
             <form onSubmit={handleSubmit} className="space-y-5 max-w-sm">
               <div>
-                <label className="block text-xs text-gray-600 mb-1">
+                <label className="block text-sm text-gray-600 mb-1">
                   Full name *
                 </label>
                 <input
@@ -68,7 +68,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-xs text-gray-600 mb-1">
+                <label className="block text-sm text-gray-600 mb-1">
                   Email *
                 </label>
                 <input
@@ -82,7 +82,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-xs text-gray-600 mb-1">
+                <label className="block text-sm text-gray-600 mb-1">
                   Phone number *
                 </label>
                 <input
@@ -96,7 +96,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label className="block text-xs text-gray-600 mb-1">
+                <label className="block text-sm text-gray-600 mb-1">
                   Your comment *
                 </label>
                 <textarea
@@ -111,7 +111,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="bg-gray-900 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+                className="bg-gray-900 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors cursor-pointer"
               >
                 Send Message
               </button>

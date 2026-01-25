@@ -4,20 +4,21 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ctaImages = [
   {
-    src: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=400&h=600&auto=format&fit=crop",
+    src: "/cta-1.jfif",
     alt: "Design showcase 1",
   },
   {
-    src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&h=600&auto=format&fit=crop",
+    src: "/cta-2.jfif",
     alt: "Design showcase 2",
   },
   {
-    src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=400&h=600&auto=format&fit=crop",
+    src: "/cta-3.jfif",
     alt: "Design showcase 3",
   },
 ];
@@ -89,7 +90,7 @@ const CTA = () => {
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
             Ready to <span className="font-playfair italic">start</span>
             <br />
             your project!
@@ -97,16 +98,16 @@ const CTA = () => {
         </div>
 
         {/* Description */}
-        <p className="text-center text-gray-500 text-sm max-w-xl mx-auto mb-8">
+        <p className="text-center text-gray-500 text-md max-w-xl mx-auto mb-8">
           Tell us about your vision and we&apos;ll help you bring it to life
           through beautiful, strategic design. Book a free discovery call
         </p>
 
         {/* CTA Button */}
         <div className="flex justify-center mb-20">
-          <button className="bg-gray-900 text-white px-5 py-4 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors">
-            <span className="font-medium text-xs">Book a free call now</span>
-            <ArrowUpRight className="w-3 h-3" />
+          <button className="bg-gray-900 text-white px-5 py-4 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors cursor-pointer">
+            <span className="font-medium text-sm">Book a free call now</span>
+            <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
 
@@ -119,12 +120,14 @@ const CTA = () => {
             {ctaImages.map((image, index) => (
               <div
                 key={index}
-                className="cta-image w-80 h-[480px] rounded-md overflow-hidden shadow-md bg-gray-900"
+                className="cta-image w-80 h-[480px] rounded-lg overflow-hidden shadow-md bg-gray-900"
               >
-                <img
+                <Image
                   src={image.src}
+                  width={400}
+                  height={520}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
             ))}

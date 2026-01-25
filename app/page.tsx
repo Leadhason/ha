@@ -6,6 +6,7 @@ import Services from "@/components/services";
 import Portfolio from "@/components/portfolio";
 import WhyChooseUs from "@/components/why-choose-us";
 import Testimonials from "@/components/testimonials";
+import FAQ from "@/components/faq";
 import CTA from "@/components/cta";
 import Contact from "@/components/contact";
 
@@ -23,6 +24,7 @@ export default function Home() {
       <Portfolio />
       <WhyChooseUs />
       <Testimonials />
+      <FAQ />
       <CTA />
       <Contact />
       <Footer />

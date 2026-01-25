@@ -25,7 +25,7 @@ const Testimonials = () => {
     // Set initial stacked state - spread out and skewed
     gsap.set(cards, {
       position: "absolute",
-      top: (i) => i * 10,
+      top: (i) => i * 5,
       left: "50%",
       xPercent: -50,
       x: (i) => (i - (totalCards - 1) / 2) * 90,
@@ -74,7 +74,7 @@ const Testimonials = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
           Trusted by <span className="font-playfair italic">teams</span>
           <br />
           around the world

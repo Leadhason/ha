@@ -33,9 +33,9 @@ const Services = () => {
             <Link
               href={`/services/${service.slug}`}
               key={index}
-              className={`relative grid grid-cols-12 items-center py-8 px-6 border-dotted-spaced cursor-pointer transition-all duration-300 ${
+              className={`relative grid grid-cols-12 items-center py-6 px-6 border-dotted-spaced cursor-pointer transition-all duration-300 ${
                 hoveredIndex === index
-                  ? "bg-gradient-to-r from-violet-500 to-cyan-400 text-white rounded-none"
+                  ? "bg-service-hover text-white rounded-none shadow-inner"
                   : ""
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -68,8 +68,8 @@ const Services = () => {
                 <ArrowRight
                   className={`w-6 h-6 transition-transform duration-300 ${
                     hoveredIndex === index
-                      ? "text-white -rotate-45"
-                      : "text-gray-800"
+                      ? "text-white"
+                      : "text-gray-800 -rotate-45"
                   }`}
                 />
               </div>

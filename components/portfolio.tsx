@@ -59,7 +59,7 @@ const Portfolio = () => {
           <span className="inline-block px-4 py-2 bg-gray-100 rounded-full text-xs font-medium mb-6">
             OUR PORTFOLIO
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold">
             Explore <span className="font-playfair italic">our work</span> that
             <br />
             drives real results
