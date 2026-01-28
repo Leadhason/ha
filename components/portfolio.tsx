@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Plus } from "lucide-react"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,7 +50,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-24 px-8 z-0">
+    <section ref={sectionRef} className="relative py-24 px-4 z-0">
       {/* Background blob */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-cyan-200/60 rounded-full blur-3xl pointer-events-none" />
 
@@ -136,6 +137,13 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+
+        <button className="bg-white text-black hover:bg-[#1a1a1a] hover:text-white px-7 py-4 rounded-full flex items-center gap-2 hover:bg-black transition-colors group border border-[#1a1a1a] cursor-pointer">
+          <Plus className="w-4 h-4" />
+          <span className="text-xs font-medium tracking-normal uppercase">
+            See More Projects
+          </span>
+        </button>
       </div>
     </section>
   );

@@ -63,7 +63,7 @@ const Testimonials = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-8 -mb-12 px-8 overflow-hidden"
+      className="min-h-screen py-8 -mb-12 px-4 overflow-hidden"
     >
       <div className="max-w-6xl mx-auto">
         {/* Badge */}

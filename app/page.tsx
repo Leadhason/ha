@@ -20,10 +20,16 @@ export default function Home() {
       <Navbar />
       <Partners />
       <WhoWeHelp />
-      <Services />
-      <Portfolio />
+      <div id="services">
+        <Services />
+      </div>
+      <div id="portfolio">
+        <Portfolio />
+      </div>
       <WhyChooseUs />
-      <Testimonials />
+      <div id="testimonials">
+        <Testimonials />
+      </div>
       <FAQ />
       <CTA />
       <Contact />

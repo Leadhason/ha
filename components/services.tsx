@@ -11,7 +11,7 @@ const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-gray-100 py-8 px-8 overflow-hidden">
+    <section className="bg-gray-100 py-24 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-6">

@@ -12,7 +12,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-16 px-8">
+    <section id="faq" className="bg-white py-24 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         {/* Left Column */}
         <div className="space-y-8">

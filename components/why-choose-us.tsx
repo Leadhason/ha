@@ -27,7 +27,7 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-gray-100 py-24 px-8 relative overflow-hidden z-0">
+    <section className="bg-gray-100 py-24 px-4 relative overflow-hidden z-0">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-purple-200/60 via-blue-200/40 to-cyan-200/60 rounded-full blur-3xl" />
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Badge */}

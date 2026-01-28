@@ -180,6 +180,33 @@ export const portfolioItems = [
       "A sleek and modern trading application designed to simplify cryptocurrency trading for beginners and experts alike.",
     image: "/port-piece-3.png",
   },
+  {
+    number: "04",
+    tags: ["Smart Home", "UI/UX Design", "IoT"],
+    title: "Aura Home",
+    subtitle: "smart home ecosystem",
+    description:
+      "A complete smart home management system focusing on intuitive control and energy efficiency visualizations.",
+    image: "/port-piece-4.png",
+  },
+  {
+    number: "05",
+    tags: ["E-commerce", "Web Development", "Branding"],
+    title: "Vogue",
+    subtitle: "luxury fashion store",
+    description:
+      "A high-end e-commerce platform for a luxury fashion brand, featuring minimalist design and seamless checkout.",
+    image: "/web-design.png",
+  },
+  {
+    number: "06",
+    tags: ["AI", "Automation", "SaaS"],
+    title: "Cognity",
+    subtitle: "AI productivity tool",
+    description:
+      "An AI-powered automation platform that streamlines complex business workflows and provides actionable insights.",
+    image: "/ai-solutions.png",
+  },
 ];
 
 // Testimonials data

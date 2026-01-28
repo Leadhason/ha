@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative py-24 px-8 overflow-hidden">
+    <section className="relative bg-white py-24 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left side - Heading and Contact Info */}

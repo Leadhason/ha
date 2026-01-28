@@ -24,7 +24,7 @@ const PinterestIcon = () => (
 
 const Footer = () => {
   return (
-    <footer className="relative py-8 px-8 border-t border-gray-200 overflow-hidden">
+    <footer className="relative bg-white py-8 px-4 border-t border-gray-200 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           {/* Left - Address */}

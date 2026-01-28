@@ -7,7 +7,7 @@ const partners = [
 
 const Partners = () => {
   return (
-    <section className="bg-gray-100 py-12 px-8 border-b border-dotted border-gray-300">
+    <section className="bg-gray-100 py-12 px-4 border-b border-dotted border-gray-300">
       <div className="max-w-7xl p-7 mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         {/* Left side - Text with Avatars */}
         <div className="flex items-center gap-4 flex-shrink-0">

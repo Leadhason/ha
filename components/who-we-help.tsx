@@ -17,13 +17,13 @@ const WhoWeHelp = () => {
   useEffect(() => {
     const section = sectionRef.current;
     const cardsContainer = cardsContainerRef.current;
-    
+
     if (!section || !cardsContainer) return;
 
     const cards = cardsContainer.querySelectorAll(".sector-card");
     const totalCards = cards.length;
-    const cardWidth = 256; // w-64 = 16rem = 256px
-    const gap = 24; // gap-6 = 1.5rem = 24px
+    const cardWidth = 288; 
+    const gap = 20;
 
     // Set initial stacked state - centered with more spacing
     gsap.set(cards, {
@@ -63,8 +63,8 @@ const WhoWeHelp = () => {
 
   return (
     <section
-      ref={sectionRef}
-      className="min-h-screen bg-gray-100 py-8 mt-12 px-8 overflow-hidden"
+      ref={sectionRef}                                                                                                                                                                    
+      className="min-h-screen bg-gray-100 py-4 pt-12 px-4 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
@@ -82,15 +82,15 @@ const WhoWeHelp = () => {
         </h2>
 
         {/* Cards Container */}
-        <div ref={cardsRef} className="flex justify-center h-[600px] w-8xl">
-          <div
-            ref={cardsContainerRef}
-            className="relative h-full w-full"
-          >
+        <div
+          ref={cardsRef}
+          className="flex justify-center max-h-[500px] min-w-7xl"
+        >
+          <div ref={cardsContainerRef} className="relative h-full w-full">
             {sectors.map((sector, index) => (
               <div
                 key={index}
-                className="sector-card w-64 h-[350px] bg-white/40 backdrop-blur-md border border-white/50 rounded-md p-6 shadow-md flex flex-col"
+                className="sector-card w-72 h-[400px] bg-white/40 backdrop-blur-md border border-white/50 rounded-md p-6 shadow-md flex flex-col"
               >
                 <div className="mb-4">
                   <sector.icon className="w-8 h-8 stroke-[1.5]" />

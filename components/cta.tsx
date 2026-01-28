@@ -86,7 +86,7 @@ const CTA = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-gray-100 py-24 px-8">
+    <section ref={sectionRef} className="bg-gray-100 py-24 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-6">
