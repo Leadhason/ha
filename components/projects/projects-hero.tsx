@@ -60,7 +60,7 @@ const ProjectsHero = () => {
           <span className="text-xs font-bold tracking-[0.4em] text-blue-700 uppercase mb-8 block">
             Our Portfolio
           </span>
-          <h1 className="text-6xl md:text-8xl font-bold leading-[0.85] tracking-tighter mb-10">
+          <h1 className="text-4xl md:text-8xl font-bold leading-[0.85] tracking-tighter mb-10">
             Engineering <br />
             <span className="font-playfair italic font-medium">
               impact
@@ -69,10 +69,10 @@ const ProjectsHero = () => {
             through design.
           </h1>
 
-          <div className="grid grid-cols-3 gap-8 border-t border-gray-100 pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 border-t border-gray-100 pt-10">
             {stats.map((stat, i) => (
               <div key={i} className="flex flex-col">
-                <span className="text-3xl font-bold mb-1 tracking-tight">
+                <span className="text-2xl md:text-3xl font-bold mb-1 tracking-tight">
                   {stat.value}
                 </span>
                 <span className="text-[10px] text-gray-400 uppercase tracking-widest leading-tight">
@@ -86,7 +86,7 @@ const ProjectsHero = () => {
         {/* Visual Content */}
         <div
           ref={visualRef}
-          className="relative aspect-square lg:h-[750px] order-1 lg:order-2"
+          className="relative aspect-square h-auto lg:h-[750px] order-1 lg:order-2"
         >
           <div className="absolute inset-0 bg-blue-50/70 rounded-[5rem] rotate-2 scale-105" />
           <img

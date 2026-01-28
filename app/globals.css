@@ -285,4 +285,13 @@ body {
     mix-blend-mode: overlay;
     pointer-events: none;
   }
+
+  /* Responsive Utilities */
+  .text-fluid-h1 {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-32 px-6;
+  }
 }

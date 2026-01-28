@@ -34,15 +34,15 @@ const Hero = () => {
       </div>
 
       {/* Headline */}
-      <div className="px-8 mt-12">
-        <h1 className="text-5xl md:text-6xl font-medium font-playfair italic">
+      <div className="px-6 md:px-8 mt-8 md:mt-12">
+        <h1 className="text-4xl md:text-6xl font-medium font-playfair italic">
           Design. Develop. Solution
         </h1>
       </div>
 
       {/* Large outline text */}
-      <div className="px-8 mt-4">
-        <h2 className="text-[12rem] md:text-[16rem] font-black leading-none tracking-tight font-mono">
+      <div className="px-6 md:px-8 mt-4">
+        <h2 className="text-[clamp(4rem,20vw,16rem)] font-black leading-none tracking-tight font-mono break-all md:break-normal">
           STRATEGY
         </h2>
       </div>

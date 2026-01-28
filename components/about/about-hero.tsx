@@ -54,7 +54,7 @@ const AboutHero = () => {
           <span className="text-xs font-bold tracking-[0.3em] text-blue-600 uppercase mb-6 block">
             Our Vision
           </span>
-          <h1 className="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter mb-8">
+          <h1 className="text-4xl md:text-8xl font-bold leading-[0.9] tracking-tighter mb-8">
             We turn <br />
             <span className="font-playfair italic font-medium">
               visions
@@ -62,7 +62,7 @@ const AboutHero = () => {
             into <br />
             digital marvels.
           </h1>
-          <p className="text-xl text-gray-500 max-w-md leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-500 max-w-md leading-relaxed">
             A boutique studio where radical creativity meets precise
             engineering. We don't just build websites; we curate digital
             legacies.
@@ -72,7 +72,7 @@ const AboutHero = () => {
         {/* Visual Content */}
         <div
           ref={visualRef}
-          className="relative aspect-square lg:h-[700px] order-1 lg:order-2"
+          className="relative aspect-square h-auto lg:h-[700px] order-1 lg:order-2"
         >
           <div className="absolute inset-0 bg-blue-50/50 rounded-[4rem] -rotate-3 transition-transform hover:rotate-0 duration-700" />
           <img

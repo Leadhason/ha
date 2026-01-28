@@ -20,7 +20,7 @@ const FAQ = () => {
             <span className="text-blue-600 font-mono text-xs font-semibold tracking-wider mb-8">
               [ FAQs ]
             </span>
-            <h2 className="text-4xl mt-8 md:text-5xl font-bold text-gray-900 leading-tight pr-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight pr-4 mt-8">
               Get every answer from here quickly and confidently.
             </h2>
           </div>

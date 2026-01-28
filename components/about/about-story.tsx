@@ -66,14 +66,14 @@ const AboutStory = () => {
         className="flex h-screen w-max items-center px-[10vw] gap-[20vw]"
       >
         {/* Intro Slide */}
-        <div className="flex flex-col justify-center max-w-2xl">
-          <span className="text-blue-400 font-mono mb-4">
+        <div className="flex flex-col justify-center max-w-2xl px-6 md:px-0">
+          <span className="text-blue-400 font-mono mb-4 text-sm">
             01 // THE JOURNEY
           </span>
-          <h2 className="text-text-7xl md:text-9xl font-bold tracking-tighter leading-none mb-8">
+          <h2 className="text-6xl md:text-9xl font-bold tracking-tighter leading-none mb-8">
             OUR <br /> STORY.
           </h2>
-          <p className="text-2xl text-gray-400">
+          <p className="text-lg md:text-2xl text-gray-400 leading-relaxed">
             A linear progression of non-linear{" "}
             <span className="italic font-playfair text-white">thoughts.</span>
           </p>
@@ -83,17 +83,17 @@ const AboutStory = () => {
         {chapters.map((chapter, i) => (
           <div
             key={i}
-            className="group relative flex flex-col justify-center min-w-[300px] md:min-w-[500px]"
+            className="group relative flex flex-col justify-center min-w-[280px] md:min-w-[500px]"
           >
-            <span className="text-[10rem] md:text-[15rem] font-black opacity-5 absolute -top-20 -left-10 select-none group-hover:opacity-10 transition-opacity">
+            <span className="text-[6rem] md:text-[15rem] font-black opacity-5 absolute -top-10 md:-top-20 -left-6 md:-left-10 select-none group-hover:opacity-10 transition-opacity">
               {chapter.year}
             </span>
             <div className="relative z-10">
-              <h3 className="text-5xl font-bold mb-6 flex items-center gap-4">
-                <span className="w-12 h-px bg-blue-500" />
+              <h3 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 flex items-center gap-4">
+                <span className="w-8 md:w-12 h-px bg-blue-500" />
                 {chapter.title}
               </h3>
-              <p className="text-xl text-gray-400 leading-relaxed max-w-sm">
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-sm">
                 {chapter.description}
               </p>
             </div>

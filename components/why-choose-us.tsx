@@ -6,7 +6,8 @@ const reasons = [
   {
     icon: Lightbulb,
     title: "Strategic design thinking",
-    description: "Every decision is rooted in purpose blending creativity with strategy.",
+    description:
+      "Every decision is rooted in purpose blending creativity with strategy.",
   },
   {
     icon: BookOpen,
@@ -32,13 +33,13 @@ const WhyChooseUs = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Badge */}
         <div className="flex justify-center mb-6">
-          <span className="px-4 py-2 bg-white rounded-full text-xs font-medium shadow-sm">  
+          <span className="px-4 py-2 bg-white rounded-full text-xs font-medium shadow-sm">
             WHY CHOOSE US
           </span>
         </div>
 
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
           Design with purpose,
           <br />
           built with <span className="font-playfair italic">results</span>
@@ -47,10 +48,7 @@ const WhyChooseUs = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="group h-52 perspective-1000"
-            >
+            <div key={index} className="group h-52 perspective-1000">
               <div className="relative w-full h-full transition-transform duration-500 transform-style-3d group-hover:rotate-y-180">
                 {/* Front of card */}
                 <div className="absolute inset-0 backface-hidden bg-white/40 backdrop-blur-sm rounded-3xl p-6 flex flex-col justify-between shadow-sm border border-white/60">

@@ -28,47 +28,42 @@ const Services = () => {
         </h2>
 
         {/* Services List */}
-        <div className="border-t-dotted-spaced">
+        <div className="mt-12 md:mt-20 border-t border-gray-200">
           {services.map((service, index) => (
             <Link
               href={`/services/${service.slug}`}
               key={index}
-              className={`relative grid grid-cols-12 items-center py-6 px-6 border-dotted-spaced cursor-pointer transition-all duration-300 ${
-                hoveredIndex === index
-                  ? "bg-service-hover text-white rounded-none shadow-inner"
-                  : ""
+              className={`relative flex flex-col md:grid md:grid-cols-12 items-start md:items-center py-8 md:py-10 px-6 border-b border-gray-200 cursor-pointer transition-all duration-300 ${
+                hoveredIndex === index ? "bg-blue-700 text-white" : ""
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Number */}
               <span
-                className={`col-span-1 text-sm ${hoveredIndex === index ? "text-white" : "text-gray-400"}`}
+                className={`text-xs md:text-sm mb-2 md:mb-0 md:col-span-1 ${hoveredIndex === index ? "text-white/70" : "text-gray-400"}`}
               >
                 {service.number}
               </span>
 
               {/* Title */}
-              <h3 className="col-span-4 text-2xl md:text-3xl font-medium">
+              <h3 className="text-3xl md:text-4xl font-bold md:col-span-5 mb-4 md:mb-0 tracking-tight">
                 {service.title}
               </h3>
 
-              {/* Spacer for image area */}
-              <div className="col-span-3"></div>
-
               {/* Description */}
               <p
-                className={`col-span-3 text-sm ${hoveredIndex === index ? "text-white" : "text-gray-500"}`}
+                className={`md:col-span-5 text-base leading-relaxed ${hoveredIndex === index ? "text-white/80" : "text-gray-500"}`}
               >
                 {service.description}
               </p>
 
-              {/* Arrow */}
-              <div className="col-span-1 flex justify-end">
+              {/* Arrow (Hidden on mobile) */}
+              <div className="hidden md:flex md:col-span-1 justify-end">
                 <ArrowRight
-                  className={`w-6 h-6 transition-transform duration-300 ${
+                  className={`w-8 h-8 transition-transform duration-300 ${
                     hoveredIndex === index
-                      ? "text-white"
+                      ? "text-white rotate-0"
                       : "text-gray-800 -rotate-45"
                   }`}
                 />

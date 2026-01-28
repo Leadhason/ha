@@ -38,7 +38,7 @@ const ProjectsGrid = () => {
           {portfolioItems.map((item, index) => (
             <div
               key={index}
-              className={`${index % 2 === 1 ? "lg:mt-12" : ""} ${index % 3 === 1 ? "lg:mt-24" : ""}`}
+              className={`${index % 2 === 1 ? "md:mt-12 lg:mt-12" : ""} ${index % 3 === 1 ? "lg:mt-24" : ""}`}
             >
               <ProjectCard project={item} />
             </div>

@@ -13,11 +13,8 @@ const Navbar = () => {
   return (
     <>
       <div className="absolute top-0 left-0 w-full bg-transparent z-30 p-5 flex justify-between items-center">
-        <div className="shadow-sm p-3 px-2 bg-white/80 backdrop-blur-sm rounded-full">
-          <Link
-            href="#"
-            className="flex rounded-full items-center"
-          >
+        <div className="hidden md:flex shadow-sm p-3 px-2 bg-white/80 backdrop-blur-sm rounded-full">
+          <Link href="#" className="flex rounded-full items-center">
             <div className="bg-black text-white w-10 h-10 rounded-full flex items-center justify-center">
               <Phone className="w-5 h-5" />
             </div>
